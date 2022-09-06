@@ -5,7 +5,7 @@ import { CustomButton } from './CustomButton';
 import { Header } from './Header';
 import Layout from '../constants/Layout'
 
-export function HomeSection({  }) {
+export const HomeSection = (props) => {
     return (
         <ImageBackground
             source={require('../assets/images/background.png')}
@@ -27,7 +27,7 @@ export function HomeSection({  }) {
                     source={require('../assets/images/third.png')}
                     style={styles.thirdImage}
                 />
-                <CustomButton  text={'Shop Now'}  textSize={21}/>
+                <CustomButton text={'Shop Now'} textSize={21} />
 
             </View>
 

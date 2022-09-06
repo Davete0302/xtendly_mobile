@@ -18,11 +18,11 @@ function renderWeight(weight) {
   }
 }
 
-export function CustomText({ text, size, style, weight }) {
+export const CustomText = (props) => {
   return (
     <Text
-      style={[styles.textStyle, { fontSize: size, fontWeight: renderWeight(weight) },style]}
-    >{text}
+      style={[styles.textStyle, { fontSize: props.size, fontWeight: renderWeight(props.weight) }, props.style]}
+    >{props.text}
     </Text>
   );
 }

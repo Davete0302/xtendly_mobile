@@ -5,14 +5,14 @@ import { CustomText } from './CustomText';
 import Colors from '../constants/Colors'
 import Layout from '../constants/Layout'
 
-export function Card({ text, textSize, padding }) {
+export const Card = (props) => {
     return (
         <View style={styles.container}>
             <View
                 onPress={() => console.log('pressed')}
-                style={[styles.buttonStyle, { paddingVertical: padding ?? Layout.padding10 }]}
+                style={[styles.buttonStyle, { paddingVertical: props.padding ?? Layout.padding10 }]}
             >
-                <CustomText text={text} size={textSize} style={{ color: Colors.white }} />
+                <CustomText text={props.text} size={props.textSize} style={{ color: Colors.white }} />
             </View>
         </View>
     );

@@ -10,7 +10,7 @@ import { LogoCircle } from './LogoCircle';
 import Colors from '../constants/Colors';
 import Layout from '../constants/Layout'
 
-export function FooterSection({ }) {
+export const FooterSection = (props) => {
 
     return (
 

@@ -5,14 +5,14 @@ import MIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Colors from '../constants/Colors'
 import Layout from '../constants/Layout'
 
-export function LogoCircle({ name }) {
+export const LogoCircle = (props) => {
     return (
         <TouchableOpacity onPress={() => console.log('pressed')}>
             <View
                 source={require('../assets/images/logo.png')}
                 style={styles.container}
             >
-                <MIcon name={name} size={Layout.size30} color={Colors.white} />
+                <MIcon name={props.name} size={Layout.size30} color={Colors.white} />
             </View>
         </TouchableOpacity>
     );

@@ -3,19 +3,19 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { CustomText } from './CustomText';
-import  Colors  from '../constants/Colors'
+import Colors from '../constants/Colors'
 import Layout from '../constants/Layout'
 
-export function CustomButton({  text, textSize,padding }) {
+export const CustomButton = (props) => {
     const navigation = useNavigation();
-    
+
     return (
         <View style={styles.container}>
             <TouchableOpacity
-               onPress={() => navigation.navigate('Shop')}
-                style={[styles.buttonStyle,{paddingVertical:padding??Layout.padding10}]}
+                onPress={() => navigation.navigate('Shop')}
+                style={[styles.buttonStyle, { paddingVertical: props.padding ?? Layout.padding10 }]}
             >
-                <CustomText text={text} size={textSize} weight={'500'}/>
+                <CustomText text={props.text} size={props.textSize} weight={'500'} />
             </TouchableOpacity>
         </View>
     );
