@@ -4,6 +4,7 @@ export default {
     margin10: 10,
     margin15: 15,
     margin20: 20,
+    margin25: 25,
     margin30: 30,
     margin40: 40,
     margin50: 50,

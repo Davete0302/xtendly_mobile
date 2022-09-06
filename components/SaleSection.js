@@ -18,7 +18,7 @@ export function SaleSection({ }) {
                     style={styles.imageContainer}
                 >
                     <View style={styles.buttonContainer}>
-                        <Card text={'15% off'} padding={Layout.padding5} />
+                        <Card text={'15% OFF'} padding={Layout.padding5} textSize={Layout.size10} />
                     </View>
                 </ImageBackground>
                 <CustomText text={'LOREM IPSUM'} size={Layout.size15} weight={'bold'} />
@@ -30,7 +30,7 @@ export function SaleSection({ }) {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.titleContainer}>
-                <CustomText text={'SALE'} style={{ color: 'red' }} size={Layout.size35} weight={'bold'} />
+                <CustomText text={'SALE'} style={{ color: Colors.red }} size={Layout.size35} weight={'bold'} />
             </View>
             <FlatList
                 data={data}
@@ -71,19 +71,20 @@ const styles = StyleSheet.create({
     },
     container: {
         justifyContent: 'center',
-        width: 141,
+        width: '100%',
         height: 240,
         alignSelf: 'center',
         marginVertical: Layout.margin30,
-        marginHorizontal: Layout.margin15,
+        marginHorizontal: Layout.margin25,
+        paddingHorizontal: Layout.padding10
     },
     imageContainer: {
-        width: '100%',
+        width: '97%',
         height: '100%',
     },
     buttonContainer: {
         top: '10%',
-        left: 25,
+        left: 35,
         position: 'absolute',
         width: 200,
         height: Layout.size30,
